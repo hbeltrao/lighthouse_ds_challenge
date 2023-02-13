@@ -1,0 +1,3 @@
+features: [ 'Hour (Coded)', 'Immobilized bus', 'Broken Truck', 'Accident victim', 'Lack of electricity',
+            'Point of flooding', 'Defect in the network of trolleybuses', 'Semaphore off', 'Slowness in traffic (%)']
+target: 'Slowness in traffic (%)'
