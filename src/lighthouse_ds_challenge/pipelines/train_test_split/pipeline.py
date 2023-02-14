@@ -11,7 +11,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
         node(
             func=df_splitter
-            , inputs=['df_with_selected_features', 'params:features', 'params:target']
+            , inputs=['df_with_treated_selected_features', 'treated_features', 'treated_target']
             , outputs=['train_features', 'test_features', 'train_targets', 'test_targets']
         )
     ])
