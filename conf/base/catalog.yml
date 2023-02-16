@@ -29,3 +29,7 @@ test_targets:
 fitted_regressor:
   type: pickle.PickleDataSet
   filepath: data/06_models/xgb_fitted_regressor.pkl
+
+model_predictions:
+  type: pandas.CSVDataSet
+  filepath: "data/07_model_output/model_predictions.csv"

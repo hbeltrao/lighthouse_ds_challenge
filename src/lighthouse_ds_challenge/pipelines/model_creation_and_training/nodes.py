@@ -41,3 +41,9 @@ def create_model(best_parameters: dict, X_train: pd.DataFrame, y_train: pd.DataF
     fitted_regressor = tuned_regressor.fit(X_train, y_train)
 
     return fitted_regressor
+
+def test_model(regressor, X_test: pd.DataFrame):
+
+    y_pred = regressor.predict(X_test)
+
+    return y_pred

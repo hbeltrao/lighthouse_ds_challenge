@@ -4,7 +4,7 @@ generated using Kedro 0.18.4
 """
 
 from kedro.pipeline import Pipeline, node, pipeline
-from .nodes import create_model, param_optimizer
+from .nodes import create_model, param_optimizer, test_model
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -18,5 +18,10 @@ def create_pipeline(**kwargs) -> Pipeline:
             func=create_model
             , inputs=["best_parameters", "train_features", "train_targets"]
             , outputs="fitted_regressor"
+        ),
+        node(
+            func=test_model
+            , inputs=["fitted_regressor", "test_features"]
+            , outputs="model_predictions"
         )
     ])
