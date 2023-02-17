@@ -46,4 +46,6 @@ def test_model(regressor, X_test: pd.DataFrame):
 
     y_pred = regressor.predict(X_test)
 
-    return y_pred
+    df_pred = pd.DataFrame(y_pred)
+
+    return df_pred

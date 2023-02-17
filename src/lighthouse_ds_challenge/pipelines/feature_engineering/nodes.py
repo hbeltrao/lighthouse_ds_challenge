@@ -31,7 +31,7 @@ def treat_feature_names(df: pd.DataFrame, features, target):
         treated_feature = re.sub(r"[^a-zA-Z0-9 ]", "", feature).replace(" ", "_")
         treated_features.append(treated_feature)
     
-    treated_features_dict = dict(zip(feature, treated_features))
+    treated_features_dict = dict(zip(features, treated_features))
 
     df_with_treated_selected_features = df.rename(columns=treated_features_dict)
 

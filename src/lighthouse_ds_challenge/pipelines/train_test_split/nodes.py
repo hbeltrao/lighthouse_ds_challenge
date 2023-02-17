@@ -11,7 +11,7 @@ def df_splitter(df:pd.DataFrame, treated_features, treated_target):
     Basic function to split the dataset into train and test portions,
     saving them into separated  files  to be used
     """
-    X = df[treated_features].drop(columns=treated_target)
+    X = df[treated_features]
     y = df[treated_target]
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=33)
