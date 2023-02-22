@@ -10,7 +10,13 @@ conf/local/**
 conf/**/*credentials*
 
 # ignore everything in the following folders
-data/**
+data/02**
+data/03**
+data/04**
+data/05**
+data/06**
+data/07**
+data/08**
 logs/**
 
 # except their sub-folders
